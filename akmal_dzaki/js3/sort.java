@@ -1,8 +1,10 @@
 package akmal_dzaki.js3;
 
+import java.util.ArrayList;
+
 abstract class sort {
+    public ArrayList<Integer> dat = new ArrayList<Integer>();
     
-    public abstract void ascend();
-    public abstract void descnd();
+    public abstract void input();
+
 }
-adasdad
