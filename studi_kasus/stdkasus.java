@@ -16,8 +16,7 @@ public class stdkasus extends proces{
 
         double a,b;
 
-        System.out.println("Ini adalah program kalkulator sederhana");
-
+        System.out.println("\nIni adalah program kalkulator sederhana");
         System.out.println("Berikut proses yang dapat kamu lakukan:");
         System.out.println("1. Tambah");
         System.out.println("2. Kurang");
