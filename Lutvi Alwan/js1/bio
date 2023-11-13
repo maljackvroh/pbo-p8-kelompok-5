@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+abstract class abstrack {
+    public abstract void data();
+}
+
+class bio extends abstrack {
+    String k, k3, k4;
+
+    @Override
+    public void data() {
+        Scanner a = new Scanner(System.in);
+        System.out.print("Tulis Nama Lengkap : ");
+        String k = a.nextLine();
+
+        System.out.print("Tulis Alamat : ");
+        String k3 = a.nextLine();
+        System.out.print("Tulis status : ");
+        String k4 = a.nextLine();
+        System.out.println("==================");
+        System.out.println("Nama Lengkap : " + k);
+        System.out.println("Alamat       : " + k3);
+        System.out.println("Status       : " + k4);
+    }
+
+}
+
+public class main {
+    public static void main(String[] args) {
+        bio a = new bio();
+        a.data();
+    }
+}
