@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+abstract class MyAbstractClass {
+    public abstract int volume(int panjang, int lebar, int tinggi);
+}
+
+public class JavaApplication5 extends MyAbstractClass {
+    @Override
+    public int volume(int panjang, int lebar, int tinggi) {
+        int volume, p, l, t;
+        p = panjang;
+        l = lebar;
+        t = tinggi;
+        volume = l * p * t;
+        System.out.println("Volume balok: " + volume);
+        return volume;
+    }
+
+    public static void main(String[] args) {
+        Scanner a = new Scanner(System.in);
+        int p, l, t;
+
+        System.out.println("Masukkan panjang");
+        p = a.nextInt();
+        System.out.println("Masukkan lebar");
+        l = a.nextInt();
+        System.out.println("Masukkan tinggi");
+        t = a.nextInt();
+
+        JavaApplication5 b = new JavaApplication5();
+        System.out.println(b.volume(p, l, t));
+    }
+}

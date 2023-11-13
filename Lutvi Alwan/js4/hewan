@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+abstract class hewan {
+    public abstract void pilih(int p);
+}
+
+public class hw extends hewan {
+    @Override
+    public void pilih(int pi) {
+        switch (pi) {
+            case 1:
+                System.out.println("Anda memilih Singa");
+                break;
+            case 2:
+                System.out.println("Anda memilih Gajah");
+                break;
+            default:
+                System.out.println("Pilihan tidak valid");
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int choice;
+
+        System.out.println("=== Program Hewan ===");
+        System.out.println("1. Pilih Singa");
+        System.out.println("2. Pilih Gajah");
+        System.out.println("Masukkan pilihan: ");
+        choice = scanner.nextInt();
+        hw animalProgram = new hw();
+        animalProgram.pilih(choice);
+    }
+}
