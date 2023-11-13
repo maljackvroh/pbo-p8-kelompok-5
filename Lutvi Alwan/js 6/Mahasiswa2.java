@@ -4,12 +4,18 @@ interface Mahasiswa {
 
     void setNIM(String nim);
 
+}
+
+interface jurusan {
+    void jurusan(String jurus);
+
     void displayInfo();
 }
 
-class KelasMahasiswa implements Mahasiswa {
+class KelasMahasiswa implements Mahasiswa, jurusan {
     private String nama;
     private String nim;
+    private String jurusan;
 
     @Override
     public void setNama(String nama) {
@@ -22,21 +28,27 @@ class KelasMahasiswa implements Mahasiswa {
     }
 
     @Override
-    public void display() {
+    public void displayInfo() {
         System.out.println("Nama: " + nama);
         System.out.println("NIM: " + nim);
+        System.out.println("Jurusan : " + jurusan);
+    }
+
+    @Override
+    public void jurusan(String jurus) {
+        this.jurusan = jurus;
     }
 }
 
 public class Mahasiswa2 {
     public static void main(String[] args) {
-        KelasMahasiswa a = new KelasMahasiswa();
+        KelasMahasiswa mahasiswa = new KelasMahasiswa();
 
-        a.setNama("Andi");
-        a.setNIM("Z1V099088");
-
+        mahasiswa.setNama("Andi");
+        mahasiswa.setNIM("Z1V099088");
+        mahasiswa.jurusan("Teknik Pedang");
         System.out.println("Info Mahasiswa:");
         System.out.println("------------------------");
-        mahasiswa.display();
+        mahasiswa.displayInfo();
     }
 }
