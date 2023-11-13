@@ -22,7 +22,7 @@ class KelasMahasiswa implements Mahasiswa {
     }
 
     @Override
-    public void displayInfo() {
+    public void display() {
         System.out.println("Nama: " + nama);
         System.out.println("NIM: " + nim);
     }
@@ -30,13 +30,13 @@ class KelasMahasiswa implements Mahasiswa {
 
 public class Mahasiswa2 {
     public static void main(String[] args) {
-        KelasMahasiswa mahasiswa = new KelasMahasiswa();
+        KelasMahasiswa a = new KelasMahasiswa();
 
-        mahasiswa.setNama("Andi");
-        mahasiswa.setNIM("Z1V099088");
+        a.setNama("Andi");
+        a.setNIM("Z1V099088");
 
         System.out.println("Info Mahasiswa:");
         System.out.println("------------------------");
-        mahasiswa.displayInfo();
+        mahasiswa.display();
     }
 }
